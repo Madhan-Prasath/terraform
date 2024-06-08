@@ -1,0 +1,32 @@
+module "proxmox" {
+    # source
+    source = "./modules/proxmox"
+
+    # Proxmox API details
+    proxmox_api_url = "https://<proxmox-ip-address>:8006/api2/json"
+    proxmox_api_token_id = "terraform-prov@pve!terraform"
+    proxmox_api_token_secret = ""
+
+    # Proxmox User
+    pm_user = ""
+    pm_password = ""
+
+    # Proxmox node details
+    target_node="pve"
+    hostname=""
+    ostemplate="local-btrfs:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
+    memory=2048
+    cores=2
+
+    # SSH Key
+    ssh_public_keys=<<-EOT
+        <ssh-public-key>
+    EOT
+
+    # Resource
+    storage="local-btrfs"
+    disk_size="20G"
+    ip_address="<ip-address>/<cidr>"
+    gateway=""
+
+}
