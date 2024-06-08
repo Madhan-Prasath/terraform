@@ -36,7 +36,7 @@ To deploy containers using Terraform, follow these simple steps:
 
 **Clone the Repository:** Begin by cloning this repository to your machine using the command:
 ```shell
-git clone ssh://git@git.bitsathy.ac.in:2222/DevOps/terraform.git
+git clone https://github.com/Madhan-Prasath/terraform.git
 ```
 **Navigate to Project Directory:** Move into the project directory using: `cd proxmox-terraform-containers`
 
